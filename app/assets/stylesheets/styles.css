@@ -1,0 +1,34 @@
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-color: #999;
+}
+
+h1 {
+	font-family: 'Fira Sans', sans-serif;
+	font-weight: 300;
+}
+
+h2 {
+	font-weight: 300;
+	font-size: 21px;
+	text-transform: uppercase;
+}
+
+
+.cityImage {
+	margin-bottom: 3%;
+}
+
+
+.navbar, .navbar-default {
+	border-radius: 0;
+	background-color: #3B2642;
+}
+
+img {
+	margin: 0 auto;
+}
+
+.thumbnail {
+height: 400px;
+}

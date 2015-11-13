@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: 'users#index'
+  root to: 'cities#show'
 
   get '/users', to: 'users#index', as: 'users'
 
@@ -13,5 +13,6 @@ Rails.application.routes.draw do
 
   post '/sessions', to: 'sessions#create', as: 'sessions'
 
+  get '/cities', to: 'cities#show', as: 'cities'
 
 end
