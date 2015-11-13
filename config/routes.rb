@@ -15,7 +15,11 @@ Rails.application.routes.draw do
 
   get '/cities', to: 'cities#index', as: 'cities'
 
-  get '/cities/new', to: 'libaries#new', 'new_library'
+  get '/cities/new', to: 'cities#new', as:'new_city'
+
+  post '/cities', to: 'cities#create'
+
+  get '/cities/:id', to: 'cities#show', as: 'city'
 
   # get '/logout', to: 'cities#index'
 
