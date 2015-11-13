@@ -13,5 +13,9 @@ Sign Up
   <div>
     <%= f.password_field :password, placeholder: "Password" %>
   </div>
+  <div>
+    <%= f.text_field :confirmation_code, placeholder: "Contributor Code" %>
+    <%= f.hidden_field :admin, value: false %>
+  </div>
   <%= f.submit "Sign Up" %>
 <% end %>
