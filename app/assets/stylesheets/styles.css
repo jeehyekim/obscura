@@ -17,8 +17,14 @@ h2 {
 
 .cityImage {
 	margin-bottom: 3%;
+	margin: 0 auto;
 }
 
+.navbar-brand {
+	color: #fff;
+	font-family: 'Fira Sans', sans-serif;
+	font-style: italic;
+}
 
 .navbar, .navbar-default {
 	border-radius: 0;
@@ -26,9 +32,106 @@ h2 {
 }
 
 img {
+	display: block;
 	margin: 0 auto;
 }
 
+img.img-responsive {
+	max-width: 400px !important;
+}
+
 .thumbnail {
-height: 400px;
+	display: block;
+	border: none !important;
+}
+
+
+
+
+/* -------------------------------
+   8.0 Footer Setting
+------------------------------- */
+
+/* 8.1 Footer Element Setting */
+
+p.footerColor {
+	color: #fff;
+}
+.footer {
+    background: #242a30;
+    -webkit-box-shadow: inset 0 100px 80px -80px rgba(0,0,0,.7);
+    box-shadow: inset 0 100px 80px -80px rgba(0,0,0,.7);
+    padding: 30px 0 0;
+}
+.footer-section {
+    margin-bottom: 60px;
+}
+.footer .footer-title {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    color: #5A5E63;
+    margin-bottom: 20px;
+    margin-top: 0;
+}
+.footer ul {
+    font-size: 13px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    line-height: 28px;
+}
+.footer ul a {
+    color: #919497;
+}
+.footer ul.archives > li .total {
+    font-size: 12px;
+    color: #5A5E63;
+    margin-left: 5px;
+    font-weight: normal;
+}
+.footer ul.recent-post h4 {
+    font-size: 13px;
+}
+.footer ul.recent-post h4 .time {
+    display: block;
+    color: #5A5E63;
+    font-size: 12px;
+    font-weight: normal;
+    margin-top: -2px;
+    margin-bottom: 15px;
+}
+.footer ul.recent-post a {
+    font-size: 13px; 
+    line-height: 28px;
+}
+
+
+
+/* 8.2 Footer Copyright Setting */
+
+.footer-copyright {
+    padding: 20px 0;
+    font-size: 13px;
+    color: #fff;
+}
+.footer-copyright:before,
+.footer-copyright:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+.footer-copyright .social-media-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    float: right;
+    font-size: 14px;
+}
+.footer-copyright .social-media-list > li {
+    float: right;
+}
+.footer-copyright .social-media-list > li + li {
+    margin-left: 15px;
 }
