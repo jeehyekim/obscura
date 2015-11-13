@@ -16,4 +16,6 @@ Rails.application.routes.draw do
 
   get '/cities', to: 'cities#index', as: 'cities'
 
+  get '/logout', to: 'cities#show'
+
 end
