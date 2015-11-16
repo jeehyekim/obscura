@@ -8,6 +8,9 @@ class PostsController < ApplicationController
 	end
 
 	def create
+    if user_params[:admin] = true
+    end
+
 		@post = Post.create(params.require(:post).permit(:title, :content, :imageUrl))
 		@city = City.find(params[:id])
 		@post.city_id = @city.id
@@ -19,8 +22,9 @@ class PostsController < ApplicationController
 		redirect_to post_path
 	end
 
-  def show
-    redirect_to city_path
+   def show
+    @city = City.find(params[:id])
+    @posts = @city.posts
   end
 
 end

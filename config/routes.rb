@@ -31,5 +31,10 @@ Rails.application.routes.draw do
   # post '/cities/:id/posts', to: 'posts#create'
 
   post '/cities/:id/posts/:id', to: 'posts#show', as: 'post'
+
+  post '/cities/:id/posts', to: 'posts#create'
+
+  get '/cities/:id/posts/:id', to: 'posts#show'
+
   # get '/logout', to: 'cities#index'
 end

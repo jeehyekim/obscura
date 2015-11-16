@@ -19,7 +19,9 @@
 
 
 	  <div class="row">
-      <p><%= button_to "Add New Post", new_post_path, :method => 'get' %></p>
+
+                  <p><%= button_to "Add New Post", new_post_path, :method => 'get' %></p>
+
       <% @city.features.each do |feature| %>
       <% @posts.each do |post| %>
         <div class="col-xs-12 col-sm-5 col-sm-offset-1">
