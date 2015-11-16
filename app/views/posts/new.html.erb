@@ -1,6 +1,6 @@
-<%= form_for [@city, @feature, @post] do |f| %>
+<%= form_for @post do |f| %>
   <div>
-    <%= f.text_field :title, placeholder: "City Name" %>
+    <%= f.text_field :title, placeholder: "Venue Name" %>
   </div>
   <div>
     <%= f.text_field :content, placeholder: "Description" %>
@@ -8,5 +8,5 @@
   <div>
     <%= f.text_field :imageUrl, placeholder: "Image URL" %>
   </div>
-  <%= f.submit "Create City" %>
+  <%= f.submit "Create New Venue" %>
 <% end %>
