@@ -1,4 +1,4 @@
-  <head>
+<head>
     <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>Obscura</title>
@@ -14,12 +14,12 @@
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
-
-    <title>Obscura</title>
+      <link rel="stylesheet" href="/assets/stylesheets/styles.css">
+    
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
-  </head>  
+</head>  
 
 
   <nav class="navbar navbar-default">
@@ -35,23 +35,58 @@
         <a class="navbar-brand" href="/">OBSCURA</a>
       </div> 
 
-   
-      <ul class="nav navbar-nav navbar-right">
-        <li><%= button_to "Sign Up", new_user_path, :method => 'get' %></li>
-        <li><%= button_to "Log In", new_session_path, :method => 'get' %></li>
-        <li><%= button_to "Log Out", root_path, :method => 'get' %></li>
+    
+  <div>
+    <ul class="nav navbar-nav navbar pull-right">
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
+        <ul id="login-dp" class="dropdown-menu pull-right">
+        <div class="form-group">
+            <%= form_for :user, url: "/sessions", method: "post" do |f| %>
+            <div>
+              <%= f.text_field :email, placeholder: "Email",:class=>'form-control'%>
+            </div>
+            <div>
+              <%= f.password_field :password, placeholder: "Password", :class=>'form-control' %>
+            </div>
 
-        <!-- <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
-        </li> -->
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
+            <%= f.submit "Sign In", :class=> 'btn btn-primary btn-block'%>
+            <% end %>
+          </ul> 
+        </div>
+
+
+        <ul class="nav navbar-nav navbar pull-right">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Sign Up</b> <span class="caret"></span></a>
+            <ul id="login-dp" class="dropdown-menu pull-right">
+               <%= form_for :user, url: "/users", method: "post" do |f| %>
+            <div>
+              <%= f.text_field :first_name, placeholder: "First Name",:class=>'form-control'%>
+            </div>
+
+          <div>
+            <%= f.text_field :last_name, placeholder: "Last Name",:class=>'form-control'%>
+          </div>
+
+          <div>
+            <%= f.text_field :email, placeholder: "Email",:class=>'form-control'%>
+          </div>
+
+          <div>
+            <%= f.password_field :password, placeholder: "Password",:class=>'form-control'%>
+          </div>
+
+          <div>
+            <%= f.text_field :confirmation_code, placeholder: "Contributor Code" ,:class=>'form-control'%>
+            <%= f.hidden_field :admin, value: false %>
+          </div>
+
+            <%= f.submit "Sign Up",:class=> 'btn btn-primary btn-block' %>
+            <% end %>
+        </ul>
+
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+</body>

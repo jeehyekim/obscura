@@ -1,14 +1,15 @@
+<div>
+  <li><%= button_to "Create New City", new_city_path, :method => 'get' %></li>
+</div>
 <div class="username">
  <h2 class="text-center" style="font-weight:bold"><%= @user.first_name %> <%= @user.last_name %></h2>
 </div>
-
 <% if @user.admin %>
 <div>
   <h2 class="text-center">TRIPS CREATED</h2>
-
+  
 </div>
 <% end %>
-
 <div>
   <h2 class="text-center">TRIPS SAVED</h2>
 </div>

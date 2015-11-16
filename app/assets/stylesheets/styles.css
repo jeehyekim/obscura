@@ -1,3 +1,11 @@
+#login-dp{
+    z-index: 2;
+    min-width: 250px;
+    padding: 14px 14px 15px;
+    /*overflow: hidden;*/
+    background-color:rgba(255,255,255,.8);
+}
+
 body {
 	font-family: 'Open Sans', sans-serif;
 	font-color: #999;
@@ -28,7 +36,9 @@ h2 {
 
 .navbar, .navbar-default {
 	border-radius: 0;
-	background-color: #3B2642;
+  border-bottom: 1px solid #333;
+  margin-bottom: 0;
+  background-color: #fff;
 }
 
 img {
@@ -79,6 +89,10 @@ button.btn:a {
   position:relative; 
 }
 
+.cities {
+  margin-top: 3%;
+}
+
 .subtitle {
   color: #fff;
   font-size: 24px;
@@ -93,6 +107,13 @@ p {
 }
 
 
+.box {
+    margin: 0 auto;
+    background-color: #000;
+    height:200px;
+    width: 200px;
+    margin-left: 0;
+    margin-right: 0;
 
 /* -------------------------------
    8.0 Footer Setting
@@ -164,3 +185,6 @@ p {
 .footer-copyright .social-media-list > li + li {
     margin-right: 15px;
 }
+
+
+
