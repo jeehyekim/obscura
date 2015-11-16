@@ -56,6 +56,8 @@ a.dropdown-toggle {
 .navbar-fixed {
   clear: both;
 }
+
+
 /* ======= END NAVIGATION ======= */
 
 body {
@@ -98,10 +100,13 @@ img {
 	display: block;
 	margin: 0 auto;
   width: 100%;
+  overflow: hidden;
 }
 
 img.img-responsive {
 	max-width: 400px !important;
+   overflow: hidden;
+
 }
 
 .thumbnail {
@@ -171,15 +176,28 @@ button.btn:a {
 
 .box {
     margin: 0 auto;
-    background-color: #000;
     height:200px;
     width: 200px;
     margin-left: 0;
+    overflow: hidden;
     margin-right: 0;
 }
 
 .newcity {
   margin-top: 5%;
+}
+
+.crop {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.cityshow {
+  text-align: center;
+  vertical-align: middle;
+  color: #fff;
 }
 
 /* -------------------------------
@@ -189,13 +207,14 @@ button.btn:a {
 
 
 .footerCopyright {
-	color: #fff;
+	  color: #fff;
     font-family: 'Open Sans', sans-serif;
     text-transform: uppercase;
     font-weight: 300;
 }
 .footer {
-  position:fixed;
+    clear: left;
+    position:fixed;
     left:0px;
     bottom:0px;
     height:30px;
@@ -238,12 +257,14 @@ button.btn:a {
     font-size: 13px;
     color: #fff;
 }
+
 .footer-copyright:before,
 .footer-copyright:after {
     content: '';
     display: table;
     clear: both;
 }
+
 .footer-copyright .social-media-list {
     list-style-type: none;
     margin-right: 0;
@@ -251,9 +272,11 @@ button.btn:a {
     float: right;
     font-size: 14px;
 }
+
 .footer-copyright .social-media-list > li {
     float: right;
 }
+
 .footer-copyright .social-media-list > li + li {
     margin-right: 15px;
 }
