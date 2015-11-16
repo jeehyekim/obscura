@@ -40,7 +40,13 @@
             </div>  
         </div>
 
-
+        <% @cities.each do |city| %>
+          <div>
+            <h3><%= city.name %></h3>
+            <img src='<%= city.url %>'>
+          </div>
+          <br>
+        <% end %>
       
     
 

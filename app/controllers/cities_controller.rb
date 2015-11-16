@@ -14,19 +14,14 @@ class CitiesController < ApplicationController
     city_params = params.require(:city).permit(:name, :url, :description)
 
     @city = City.create(city_params)
-
     redirect_to city_path(@city)
   end
 
   def show
   	@cities = City.all
-
-    redirect_to @city
-  end
-
-  def show
     @city = City.find(params[:id])
   end
 
 
+end
 
