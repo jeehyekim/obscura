@@ -25,8 +25,10 @@ Rails.application.routes.draw do
   # get '/logout', to: 'cities#index'
 
 
-  get '/cities/:city_id/features/:feature_id/posts/new', to: 'posts#new', as: 'new_post'
+  get '/cities/:id/posts/new', to: 'posts#new', as: 'new_post'
   
-  post '/cities/:city_id/features/:feature_id/posts', to: 'posts#create'
+  post '/cities/:id/posts', to: 'posts#create'
+
+  get '/cities/:id/posts/:id', to: 'posts#show'
   # get '/logout', to: 'cities#index'
 end
