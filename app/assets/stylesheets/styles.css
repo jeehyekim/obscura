@@ -1,3 +1,57 @@
+/* ======= NAVIGATION ======= */
+
+#login-dp{
+    z-index: 2;
+    min-width: 275px;
+    padding: 14px 14px 15px;
+    background-color:rgba(255,255,255,.9);
+    font-family: 'Open Sans', sans-serif;
+}
+.form-control {
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-bottom: 1px solid lightgrey;
+  box-shadow: none !important;
+  margin-top: 1px;
+  border-radius: 0px;
+  background-color: transparent;
+
+}
+
+input {
+  background-color: transparent;
+}
+
+.btn, .btn-primary, .btn-block {
+  margin-top: 15px;
+  background-color: #61A786; 
+  border: none; 
+}
+
+a.dropdown-toggle {
+  border-bottom: none;
+  color: #fff;
+
+}
+
+.logo {
+  height: 50px;
+}
+
+.navbar-brand {
+  color: #fff;
+  font-family: 'Fira Sans', sans-serif;
+  font-style: italic;
+}
+
+.navbar, .navbar-default {
+  border-radius: 0;
+  margin-bottom: 0;
+  background-color: #fff;
+}
+/* ======= END NAVIGATION ======= */
+
 body {
 	font-family: 'Open Sans', sans-serif;
 	font-color: #999;
@@ -12,23 +66,13 @@ h2 {
 	font-weight: 300;
 	font-size: 21px;
 	text-transform: uppercase;
+  margin-top: 5%;
 }
 
 
 .cityImage {
 	margin-bottom: 3%;
 	margin: 0 auto;
-}
-
-.navbar-brand {
-	color: #fff;
-	font-family: 'Fira Sans', sans-serif;
-	font-style: italic;
-}
-
-.navbar, .navbar-default {
-	border-radius: 0;
-	background-color: #3B2642;
 }
 
 img {
@@ -43,15 +87,19 @@ img.img-responsive {
 .thumbnail {
 	display: block;
 	border: none !important;
+  max-width: 400px;
 }
 
 
 .title {
   font-family: 'Fira Sans', sans-serif;
   font-size: 60px;
+  font-weight: 500;
   margin-top: -35%;
-  color: #fff;
+  margin-left: -55%;
+  color: #CEFFE6;
   opacity: 0;
+
     -webkit-animation: fadeIn 3.3s forwards;
       -o-animation: fadeIn 3.3s forwards;
       animation: fadeIn 3.3s forwards;  
@@ -79,10 +127,18 @@ button.btn:a {
   position:relative; 
 }
 
+.cities {
+  margin-top: 3%;
+}
+
 .subtitle {
   color: #fff;
   font-size: 24px;
   opacity: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  margin-top: -4%;
+  margin-left: -38%;
     -webkit-animation: fadeIn 3.3s forwards;
       -o-animation: fadeIn 3.3s forwards;
       animation: fadeIn 3.3s forwards;  
@@ -93,12 +149,23 @@ p {
 }
 
 
+.box {
+    margin: 0 auto;
+    background-color: #000;
+    height:200px;
+    width: 200px;
+    margin-left: 0;
+    margin-right: 0;
+
+.newcity {
+  margin-top: 5%;
+}
 
 /* -------------------------------
-   8.0 Footer Setting
+   FOOTER STYLES
 ------------------------------- */
 
-/* 8.1 Footer Element Setting */
+
 
 .footerCopyright {
 	color: #fff;
@@ -107,6 +174,12 @@ p {
     font-weight: 300;
 }
 .footer {
+  position:fixed;
+    left:0px;
+    bottom:0px;
+    height:30px;
+    width:100%;
+    position: fixed;
     margin-top: 20px;
     border-top: 1px solid black;
     padding: 30px 0 0;
@@ -164,3 +237,6 @@ p {
 .footer-copyright .social-media-list > li + li {
     margin-right: 15px;
 }
+
+
+

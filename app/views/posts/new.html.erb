@@ -1,0 +1,12 @@
+<%= form_for [@city, @feature, @post] do |f| %>
+  <div>
+    <%= f.text_field :title, placeholder: "City Name" %>
+  </div>
+  <div>
+    <%= f.text_field :content, placeholder: "Description" %>
+  </div>
+  <div>
+    <%= f.text_field :imageUrl, placeholder: "Image URL" %>
+  </div>
+  <%= f.submit "Create City" %>
+<% end %>

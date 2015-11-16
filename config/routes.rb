@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
   get '/sign_in', to: 'sessions#new', as: 'new_session'
 
-  post '/sessions', to: 'sessions#create', as: 'sessions'
+  resources :sessions, only: [:new, :create, :destroy]
 
   get '/cities', to: 'cities#index', as: 'cities'
 
@@ -21,6 +21,12 @@ Rails.application.routes.draw do
 
   get '/cities/:id', to: 'cities#show', as: 'city'
 
+
   # get '/logout', to: 'cities#index'
 
+
+  get '/cities/:city_id/features/:feature_id/posts/new', to: 'posts#new', as: 'new_post'
+  
+  post '/cities/:city_id/features/:feature_id/posts', to: 'posts#create'
+  # get '/logout', to: 'cities#index'
 end
