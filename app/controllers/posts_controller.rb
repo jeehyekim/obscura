@@ -8,7 +8,7 @@ class PostsController < ApplicationController
 	end
 
 	def create
-		@post = Post.create(params.require(:post).permit(:title, :content, :imageUrl)
+		@post = Post.create(params.require(:post).permit(:title, :content, :imageUrl))
 		@city = City.find(params[:city_id])
 		@post.city_id = @city.id
 		@feature = Feature.find(params[:feature_id])
@@ -18,4 +18,5 @@ class PostsController < ApplicationController
     @post.save
 		redirect_to @city
 	end
+
 end
