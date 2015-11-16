@@ -17,11 +17,9 @@ class UsersController < ApplicationController
     user_params = params.require(:user).permit(:first_name, :last_name, :email, :password, :confirmation_code, :admin)
     
     if user_params[:confirmation_code] == "123abc"
-      user_params[:admin] = true
+       user_params[:admin] = true
     end
-
     p user_params
-
     @user = User.create(user_params)
     login(@user) # <-- login the user
     redirect_to @user # <-- go to show
