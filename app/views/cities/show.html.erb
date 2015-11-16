@@ -14,7 +14,9 @@
 
 			<div class="col-xs-12 col-sm-12 col-md-12">
 				<div class="cityImage">
-					<img src='http://i.imgur.com/Ag84cz1.jpg'/>
+
+
+					<img src="<%= @city.url %>"/>
 				</div>
 			</div>
 		</div>
@@ -93,15 +95,7 @@
 					    </div>
 					</div>
 
-					<% @cities.each do |city| %>
-					  <div>
-					    <h3><%= city.name %></h3>
-					    <img src='<%= city.url%>'>
-					    
-					  </div>
-					  <br>
-					<% end %>
-
+	
 							
 				</div>
 		</div>
