@@ -1,12 +1,7 @@
-
-<% @cities.each do |city| %>
-  <div>
-    <h3><%= city.name %></h3>
-  </div>
-  <br>
-<% end %>
-
 <body> 
+<% flash.each do |message_type, message| %>
+        <div class="alert alert-<%= message_type %>"><%= message %></div>
+      <% end %>
   <div class="container-fluid">
    <section id="coverVideo" class="video">
     
@@ -41,19 +36,12 @@
         </div>
 
 
-    <% @cities.each do |city| %>
-            <div>
-              <h3><%= city.name %></h3>
-              <img src='<%= city.url%>'>
-              
-            </div>
-            <br>
-          <% end %>
+    
 
 
 
       
-    
+ </body>   
 
 </body>
 

@@ -5,7 +5,8 @@ module SessionsHelper
   end
 
   def current_user
-    @current_user ||= User.find(session[:user_id])
+    # use find_by instead of find because find blows up when it fails to find a user
+    @current_user ||= User.find_by(id: session[:user_id])
   end
 
   def logged_in?
