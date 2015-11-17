@@ -1,15 +1,19 @@
-
+<body>
+<div class="container">
 <div class="username">
  <h2 class="text-center" style="font-weight:bold"><%= @user.first_name %> <%= @user.last_name %></h2>
 </div>
 <% if @user.admin %>
 
-    <div>
-      <p><%= button_to "Create New City", new_city_path, :method => 'get' %></p>
+    <div class='col-sm-2 col-sm-offset-5'>
+      <p><%= link_to "Create New City", new_city_path, :method => 'get', :class=> 'btn btn-primary btn-block' %></p>
     </div>
+    <br>
     <h2 class="text-center">TRIPS CREATED</h2>
-
+	
 <% end %>
 <div>
   <h2 class="text-center">TRIPS SAVED</h2>
+</div>
+</body>
 </div>
