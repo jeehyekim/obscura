@@ -1,4 +1,7 @@
+div class="row">
+    <div class="col-sm-12 text-center">
 
+      <div class="col-xs-12 col-sm-6 col-sm-offset-3 colorform">
 
 <%= form_for [@city, @post] do |f| %>
 
@@ -15,5 +18,5 @@
     <%= f.text_field :imageUrl, placeholder: "Image URL" %>
   </div>
 
-  <%= f.submit "Edit Venue" %>
+  <%= f.submit "Edit Venue", :class=> 'btn btn-primary btn-block' %>
 <% end %>
