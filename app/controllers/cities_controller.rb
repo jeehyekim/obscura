@@ -6,6 +6,7 @@ class CitiesController < ApplicationController
   end
 
   def new 
+    # @user = User.find_by(id: session[:user_id])
     @city = City.new
     render :new
   end

@@ -32,8 +32,11 @@
 
     
   <div>
+
     <ul class="nav navbar-nav navbar pull-right">
+
       <li class="dropdown">
+      <% if !current_user %>
         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
         <ul id="login-dp" class="dropdown-menu pull-right">
         <div class="form-group">
@@ -80,6 +83,17 @@
             <%= f.submit "Sign Up",:class=> 'btn btn-primary btn-block' %>
             <% end %>
         </ul>
+
+<% else %>
+          <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b> <%= current_user.first_name %></b> <span class="caret"></span></a>
+          <ul id="login-dp" class="dropdown-menu pull-right">
+
+
+        <a href="#"><%= button_to "Log Out", logout_path, :method => :delete, :class=> 'btn btn-primary btn-block' %></a>
+        <% end %>
+        </li>
+
 
       </div><!-- /.navbar-collapse -->
     <!-- /.container-fluid -->
