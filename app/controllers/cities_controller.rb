@@ -18,7 +18,6 @@ class CitiesController < ApplicationController
   end
 
   def show
-    p "*" * 1000
     @city = City.find(params[:id])
     @posts = @city.posts
   end
