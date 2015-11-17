@@ -7,8 +7,7 @@ class PostsController < ApplicationController
 		# @feature = Feature.find(params[:feature_id])
 		@post = Post.new
     @features = Feature.all
-   
-
+  
 		render :new
 	end
 
