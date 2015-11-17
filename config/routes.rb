@@ -1,40 +1,42 @@
 Rails.application.routes.draw do
   root to: 'cities#index'
 
-  get '/users', to: 'users#index', as: 'users'
+  resources :users, only: [:new, :create, :show]
 
-  get '/users/new', to: 'users#new', as: 'new_user'
+  # get '/users', to: 'users#index', as: 'users'
 
-  post '/users', to: 'users#create'
+  # get '/users/new', to: 'users#new', as: 'new_user'
 
-  get '/users/:id', to: 'users#show', as: 'user'
+  # post '/users', to: 'users#create'
+
+  # get '/users/:id', to: 'users#show', as: 'user'
 
   get '/sign_in', to: 'sessions#new', as: 'new_session'
 
   resources :sessions, only: [:new, :create, :destroy]
 
-  get '/cities', to: 'cities#index', as: 'cities'
+  resources :cities, only: [:index, :new, :create, :show] do 
 
-  get '/cities/new', to: 'cities#new', as:'new_city'
+  # get '/cities', to: 'cities#index', as: 'cities'
 
-  post '/cities', to: 'cities#create'
+  # get '/cities/new', to: 'cities#new', as:'new_city'
 
-  get '/cities/:id', to: 'cities#show', as: 'city'
+  # post '/cities', to: 'cities#create'
+
+  # get '/cities/:id', to: 'cities#show', as: 'city'
 
 
   # get '/logout', to: 'cities#index'
 
-  get '/cities/:id/posts', to: 'posts#index', as: 'posts'
+    resources :posts, only: [:new, :create, :show, :edit, :update, :destroy]
+  end
 
-  get '/cities/:id/posts/new', to: 'posts#new', as: 'new_post'
-  
+  # get '/cities/:id/posts', to: 'posts#index', as: 'posts'
+
+  # get '/cities/:id/posts/new', to: 'posts#new', as: 'new_post'
+
   # post '/cities/:id/posts', to: 'posts#create'
 
-  post '/cities/:id/posts/:id', to: 'posts#show', as: 'post'
+  # get '/cities/:id/posts/:id', to: 'posts#show'
 
-  post '/cities/:id/posts', to: 'posts#create'
-
-  get '/cities/:id/posts/:id', to: 'posts#show'
-
-  # get '/logout', to: 'cities#index'
 end
