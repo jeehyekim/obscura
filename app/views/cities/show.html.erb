@@ -19,24 +19,37 @@
 
 
 	  <div class="row">
-
-                  <p><%= button_to "Add New Post", new_post_path, :method => 'get' %></p>
-
+      <p><%= button_to "Add New Post", new_city_post_path(@city), :method => 'get' %></p>
       <% @city.features.each do |feature| %>
-      <% @posts.each do |post| %>
         <div class="col-xs-12 col-sm-5 col-sm-offset-1">
-          <h2 class="text-center"><%= feature %></h2><hr>
+          <h2 class="text-center"><%= feature.title %></h2><hr>
+          <% feature.posts.each do |post| %>
           <div class="thumbnail">
-              <img  class="img-responsive" src="http://i.imgur.com/lBKheEC.jpg"> <div class="caption">
+              <img  class="img-responsive" src="http://i.imgur.com/lBKheEC.jpg"> 
+              <div class="caption">
                 <h3><%= post.title %></h3>
                   <p><%= post.content %></p>
-                  <p><a href="" class="btn btn-info pull-right">View Project</a> </p>
-                </div>
-            </div>
+                  <p><a href="" class="btn btn-info pull-right">View Project</a></p>
+                  <%= link_to "Edit", edit_city_post_path(@city, post) %>
+                  <%= link_to "Delete", city_post_path(@city, post), method: :delete %>
+              </div>
+          </div>
+      <% end %>
         </div>
       <% end %>
-      <% end %>
     </div>
+ <!--    <div class= "col-sm-6">
+      <h1>Food & Beverages</h1>
+    </div>
+    <div class= "col-sm-6">
+      <h1>Art</h1>
+    </div>
+    <div class= "col-sm-6">
+      <h1>Accommodations</h1>
+    </div>
+    <div class= "col-sm-6">
+      <h1>Miscellaneous</h1>
+    </div> -->
   <!-- </div> -->
 
 </body>

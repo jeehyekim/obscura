@@ -1,6 +1,6 @@
 
 
-<%= form_for @post do |f| %>
+<%= form_for [@city, @post] do |f| %>
   <div>
     <%= f.text_field :title, placeholder: "Venue Name" %>
   </div>
@@ -8,9 +8,11 @@
     <%= f.text_field :content, placeholder: "Description" %>
   </div>
   <div>
+    <%= f.collection_select(:feature_id, Feature.all, :id, :title) %>
+  </div>
+  <div>
     <%= f.text_field :imageUrl, placeholder: "Image URL" %>
   </div>
 
   <%= f.submit "Create Venue" %>
->>>>>>> master
 <% end %>
