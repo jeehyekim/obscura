@@ -113,6 +113,8 @@ img.img-responsive {
 	display: block;
 	border: none !important;
   max-width: 400px;
+  min-height: 400px;
+  max-height: 400px;
 }
 
 
@@ -123,8 +125,7 @@ img.img-responsive {
   margin-top: -35%;
   margin-left: -55%;
   color: #CEFFE6;
-  opacity: 0;
-
+  opacity: 0; 
     -webkit-animation: fadeIn 3.3s forwards;
       -o-animation: fadeIn 3.3s forwards;
       animation: fadeIn 3.3s forwards;  
@@ -200,86 +201,35 @@ button.btn:a {
   color: #fff;
 }
 
+
+/* -------------------------------
+   FORM STYLES
+------------------------------- */
+input {
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-bottom: 1px solid lightgrey;
+  box-shadow: none !important;
+  margin-top: 1px;
+  border-radius: 0px;
+  background-color: transparent;
+  width: 100%;
+  height: 40px;
+
+}
+
+.colorform {
+  border-radius: 3px;
+  padding-top: 3%;
+  height: 350px;
+  color: #fff;
+  box-shadow: none;
+  margin-top: 5%;
+  background-size: cover;
+}
 /* -------------------------------
    FOOTER STYLES
 ------------------------------- */
-
-
-
-.footerCopyright {
-	  color: #fff;
-    font-family: 'Open Sans', sans-serif;
-    text-transform: uppercase;
-    font-weight: 300;
-}
-.footer {
-    clear: left;
-    position:fixed;
-    left:0px;
-    bottom:0px;
-    height:30px;
-    width:100%;
-    margin-top: 20px;
-    border-top: 1px solid black;
-    padding: 30px 0 0;
-}
-
-.footer .footer-title {
-    text-transform: uppercase;
-    font-size: 14px;
-    font-weight: bold;
-    letter-spacing: 0.5px;
-    color: #5A5E63;
-    margin-bottom: 20px;
-    margin-top: 0;
-}
-.footer ul {
-    font-size: 13px;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    line-height: 28px;
-}
-.footer ul a {
-    color: #919497;
-}
-.footer ul.archives > li .total {
-    font-size: 12px;
-    color: #5A5E63;
-    margin-left: 5px;
-    font-weight: normal;
-}
-
-/* 8.2 Footer Copyright Setting */
-
-.footer-copyright {
-    padding: 20px 0;
-    font-size: 13px;
-    color: #fff;
-}
-
-.footer-copyright:before,
-.footer-copyright:after {
-    content: '';
-    display: table;
-    clear: both;
-}
-
-.footer-copyright .social-media-list {
-    list-style-type: none;
-    margin-right: 0;
-    padding: 0;
-    float: right;
-    font-size: 14px;
-}
-
-.footer-copyright .social-media-list > li {
-    float: right;
-}
-
-.footer-copyright .social-media-list > li + li {
-    margin-right: 15px;
-}
-
 
 

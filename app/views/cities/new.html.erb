@@ -1,35 +1,23 @@
-Create a New City
 
-<div class="text-center newcity">
+<div class="row">
+    <div class="col-sm-12 text-center">
 
+      <div class="col-xs-12 col-sm-6 col-sm-offset-3 colorform">
+        <%= form_for @city do |f| %>
+          <div>
+            <%= f.text_field :name, placeholder: "City Name" %>
+          </div>
+          <div>
+            <%= f.text_field :description, placeholder: "Description" %>
+          </div>
+          <div>
+            <%= f.text_field :url, placeholder: "Image URL" %>
+          </div>
+          <%= f.submit "Create City", :class=> 'btn btn-primary btn-block' %>
+        <% end %>
+      </div>
 
-<%= form_for @city do |f| %>
-  <%= if @city.errors.any? %>
-    <div id="error_explanation">
-      <h2>
-        <%= pluralize(@city.errors.count, "error") %> prohibited this city from being saved:
-      </h2>
-      <ul>
-        <% @city.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-          <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div>
-    <%= f.text_field :name, placeholder: "City Name" %>
   </div>
-  <div>
-    <%= f.text_field :description, placeholder: "Description" %>
-  </div>
-  <div>
-    <%= f.text_field :url, placeholder: "Image URL" %>
-  </div>
-  <%= f.submit "Create City" %>
-
-<% end %>
-</div>  
-
+</div>
 
 
