@@ -3,9 +3,12 @@ class PostsController < ApplicationController
 	def new 
 		# @city = City.find_by(id: params[:id])
     @city = City.find(params[:city_id])
+    @city_id = @city.id.to_i
 		# @feature = Feature.find(params[:feature_id])
 		@post = Post.new
     @features = Feature.all
+   
+
 		render :new
 	end
 
@@ -35,8 +38,11 @@ class PostsController < ApplicationController
   end
 
   def update
+    @post = Post.find(params[:id])
+    @post.destroy!
+    @city = City.find(params[:city_id])
     @post = Post.create(post_params)
-    
+    redirect_to city_path(@city)
   end
 
   def destroy
