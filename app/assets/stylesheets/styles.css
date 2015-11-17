@@ -113,6 +113,8 @@ img.img-responsive {
 	display: block;
 	border: none !important;
   max-width: 400px;
+  min-height: 400px;
+  max-height: 400px;
 }
 
 
@@ -123,8 +125,7 @@ img.img-responsive {
   margin-top: -35%;
   margin-left: -55%;
   color: #CEFFE6;
-  opacity: 0;
-
+  opacity: 0; 
     -webkit-animation: fadeIn 3.3s forwards;
       -o-animation: fadeIn 3.3s forwards;
       animation: fadeIn 3.3s forwards;  
@@ -200,11 +201,21 @@ button.btn:a {
   color: #fff;
 }
 
+
 /* -------------------------------
-   FOOTER STYLES
+   FORM STYLES
 ------------------------------- */
-
-
+input {
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-bottom: 1px solid lightgrey;
+  box-shadow: none !important;
+  margin-top: 1px;
+  border-radius: 0px;
+  background-color: transparent;
+  width: 100%;
+  height: 40px;
 
 .footerCopyright {
 	  color: #fff;
@@ -276,11 +287,20 @@ button.btn:a {
 
 .footer-copyright .social-media-list > li {
     float: right;
+
 }
 
-.footer-copyright .social-media-list > li + li {
-    margin-right: 15px;
+.colorform {
+  border-radius: 3px;
+  padding-top: 3%;
+  height: 350px;
+  color: #fff;
+  box-shadow: none;
+  margin-top: 5%;
+  background-size: cover;
 }
-
+/* -------------------------------
+   FOOTER STYLES
+------------------------------- */
 
 

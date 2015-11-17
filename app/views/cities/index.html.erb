@@ -1,7 +1,4 @@
 <body> 
-<% flash.each do |message_type, message| %>
-        <div class="alert alert-<%= message_type %>"><%= message %></div>
-      <% end %>
   <div class="container-fluid">
    <section id="coverVideo" class="video">
     
@@ -28,24 +25,15 @@
           </div>
 
             <div class="row-fluid cities">
-                <div class="col-sm-8 col-sm-offset-2">
-
-                    <% @cities.each do |city| %>
-                      <div class="col-sm-3 box">
-                       <%= link_to city_path(city) do %>
-                       <div class="crop cityshow" style="background-image: url(<%= city.url%>)">
-                        <h3><%= city.name %></h3> 
-                       <!--  <img class="crop" src='<%= city.url%>' /> -->
-                        </div> 
-                      <% end %>
-                            
-                          </div>    
-                          <% end %>           
-                </div>
-
+                <div class="col-sm-2 col-sm-offset-2"><div class="box"></div></div>
+                <div class="col-sm-2"><div class="box"></div></div>
+                <div class="col-sm-2"><div class="box"></div></div>
+                <div class="col-sm-2"><div class="box"></div></div>
             </div>  
-       
- </body>   
+        </div>
+
+
+      
+    
 
 </body>
-

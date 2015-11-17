@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 Create a New City
 
 <div class="text-center newcity">
@@ -22,4 +24,22 @@ Create a New City
 </div>  
 
 
+>>>>>>> master
 
+<div class="row">
+    <div class="col-sm-12 text-center">
+
+      <div class="col-xs-12 col-sm-6 col-sm-offset-3 colorform">
+        <%= form_for @city do |f| %>
+          <div>
+            <%= f.text_field :name, placeholder: "City Name" %>
+          </div>
+          <div>
+            <%= f.text_field :description, placeholder: "Description" %>
+          </div>
+          <div>
+            <%= f.text_field :url, placeholder: "Image URL" %>
+          </div>
+          <%= f.submit "Create City", :class=> 'btn btn-primary btn-block' %>
+        <% end %>
+      </div>
